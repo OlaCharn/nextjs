@@ -1,6 +1,7 @@
 # Next js
 
 I have made this project to learn Next js by building applications.
+## API (<https://jsonplaceholder.typicode.com/>)
 
 ![Next js]()
 
