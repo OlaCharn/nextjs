@@ -17,9 +17,9 @@ export const getServerSideProps = async (context) => {
     defaultLocale: undefined
     */
     //console.log(context)
-    const {id} = context.params;
-    const responce = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-    const data = await responce.json();
+    const { id } = context.params;
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const data = await response.json();
 
     //если данные не пришли с сервера, то возвращается 404.js
     if(!data){
@@ -29,12 +29,12 @@ export const getServerSideProps = async (context) => {
     }
 
     return{
-        props: { contacts: data},
+        props: { contact: data},
     }
 }
 
 
-const Contact = ( {contacts} ) => {
+const Contact = ( {contact} ) => {
     return(
         <>
             <Head>
@@ -44,7 +44,7 @@ const Contact = ( {contacts} ) => {
             <h1>Olga</h1>
             <p>это путь contacts/contact</p>
 
-            <ContactsInfo contacts={contacts} />
+            <ContactsInfo contact={contact} />
         </>
         )
     }

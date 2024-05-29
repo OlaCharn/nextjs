@@ -6,8 +6,9 @@ import { useState , useEffect} from "react";
 
 //это специальная функция NEXT для API. Обязательно передать сформированный пропс в компонент!!!
 export const getStaticProps = async () => {
-    const responce = await fetch("https://jsonplaceholder.typicode.com/users")
-    const data = await responce.json();
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json();
+
 
     //если данные не пришли с сервера, то возвращается 404.js
     if(!data){
@@ -41,28 +42,20 @@ const Contacts = ( {contacts} ) => {
     },[])
     */
 
-    return(
+    return (
         <>
-            <Head>
-                <title>contacts</title>
-            </Head>
-
-            <h1>Мы создали путь</h1>
-            <p>это путь contacts/contact для того, чтобы не было ошибки 404 при переходе localhost3000/contacts мы создали в папке contacts файл index.js и в нем лежит эта разметка</p>
-            <h2>
-                а тут сейчас будет API из JSONPlaceholder.
-            </h2>
-
-            <Heading  text= "Contacts list:" />
-            <ul> {contacts && contacts.map(({id, name}) =>(
-            <li key={id} >
-                <Link href={"/contacts/${id} "} > {name} </Link> 
-            </li> 
+          <Head>
+            <title>Contacts</title>
+          </Head>
+          <Heading text="Contacts list:" />
+          <ul>
+            {contacts && contacts.map(({ id, name }) => (
+              <li key={id}>
+                <Link href={`/contacts/${id}`}>{name}</Link>
+              </li>
             ))}
-            </ul>
-
-
+          </ul>
         </>
-        )
-    }
+      );
+        }
 export default Contacts;
