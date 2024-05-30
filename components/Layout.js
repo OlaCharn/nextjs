@@ -5,12 +5,16 @@
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({children}) =>{
+
+
+
+
+const Layout = ({children, socials }) =>{
     return(
         <>
-        <Header/>
+        <Header socials={socials} />
             {children}
-        <Footer/>
+        <Footer socials={socials} />
         </>
     )
 }

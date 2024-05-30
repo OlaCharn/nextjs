@@ -1,27 +1,21 @@
 import Layout from "@/components/Layout";
-import Image from "next/image";
 import Head from "next/head";
 import "@/styles/globals.scss";
-import logoPic from "../public/logoInsta.png"
+
+//здесь я определяю, что Layout будут доступны все свойства объекта , которые хранятся в pageProps
+//это нужно для того, чтобы в компонент Footer передать иконки из API
 
 const MyApp = ({ Component, pageProps }) => {
-  
+
+    
   return(
-    <Layout>
+    <Layout {...pageProps}>
       <Head>
         <title>My NEXT APP</title>
       </Head>   
         <main>
         <Component {...pageProps} />
       </main>
-          <Image
-          src={logoPic}
-          width={300}
-          height={300}
-          alt="bigPicture"
-          placeholder="blur"
-
-          />
 
     </Layout>
 

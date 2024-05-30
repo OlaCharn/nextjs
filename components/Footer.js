@@ -1,9 +1,14 @@
 import Heading from "@/components/Heading";
+import Socials from "@/components/Socials";
 
-const Footer = () => {
+        
+
+const Footer = ({socials}) => {
+    //console.log("Footer socials", socials)
     return(
         <footer>
-            <Heading tag="h3" text = "FOOTER"/>
+            <Heading  text="" />
+            <Socials socials={socials}/>
         </footer>
     )
     }

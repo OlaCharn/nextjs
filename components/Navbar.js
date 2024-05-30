@@ -6,8 +6,10 @@ import styles from "../styles/Navbar.module.scss"
 //когда у нас большие проекты, то формируем переменную с данными
 const navigation = [
     {id:1, title: "Home", path: "/"},
+    {id:4, title: "Photos", path: "/photos"},
     {id:2, title: "Posts", path: "/posts"},
     {id:3, title: "Contacts", path: "/contacts"}
+
 ]
 //таким образом мы можем заменить статичную разметку страницы
 // вот эту:

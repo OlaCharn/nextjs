@@ -9,7 +9,6 @@ export const getStaticProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await response.json();
 
-
     //если данные не пришли с сервера, то возвращается 404.js
     if(!data){
         return{
