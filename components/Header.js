@@ -1,4 +1,3 @@
-import Heading from "@/components/Heading";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -7,5 +6,5 @@ const Header = () => {
             <Navbar/>
         </header>
     )
-    }
+}
 export default Header;

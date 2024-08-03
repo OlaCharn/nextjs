@@ -1,6 +1,5 @@
 import PhotoInfo from "@/components/PhotoInfo"
 import Head from "next/head"
-import { notFound } from "next/navigation"
 
 //getServerSideProps используем эту команду для SSR 
 //SSR - Server Site Rendering - динамический роутинг, при котором при build не формируется

@@ -3,8 +3,6 @@ import styles from "../styles/Socials.module.scss";
 
 const Socials = ( {socials} ) =>{
 
-    // {socials} - пропс, это массив
-    //проверка, если данные не существуют, то вернуть null
     if(!socials){
         return null
     }

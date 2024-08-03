@@ -1,7 +1,6 @@
 import Heading from "@/components/Heading"
 import Image from "next/image"
 
-
 const PhotoInfo = ({photo}) =>{
     const {title, url} = photo || {}
 
